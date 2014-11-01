@@ -14,6 +14,7 @@ group :test, :development do
   gem 'rspec-rails'
   gem 'pry'
   gem 'shoulda'
+  gem 'sqlite3'
 end
 
 group :development do
@@ -38,7 +39,8 @@ gem 'spring',        group: :development
 gem 'bcrypt', '~> 3.1.7'
 
 # Use unicorn as the app server
-gem 'unicorn'
+# gem 'unicorn'
+gem 'puma'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
