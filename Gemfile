@@ -18,7 +18,8 @@ group :test, :development do
 end
 
 group :development do
-  gem 'mysql2', '0.3.15'
+	gem 'sqlite3'
+  #gem 'mysql2', '0.3.15'
 end
 
 group :production do
