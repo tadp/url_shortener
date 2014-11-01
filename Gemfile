@@ -9,6 +9,7 @@ gem 'bootstrap_form'
 
 group :test, :development do
   gem 'capybara'
+  gem 'database_cleaner'
   gem 'factory_girl_rails'
   gem 'letter_opener'
   gem 'rspec-rails'
