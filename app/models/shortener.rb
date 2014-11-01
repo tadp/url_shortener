@@ -1,6 +1,4 @@
 class Shortener < ActiveRecord::Base
-	require 'Tokenable'
-  include Tokenable
 
   def save_and_process
   	generate_token
@@ -8,4 +6,7 @@ class Shortener < ActiveRecord::Base
   	self.save
   end
 
+  def generate_token
+  	self.token = SecureRandom.urlsafe_base64(n=5)
+  end
 end
