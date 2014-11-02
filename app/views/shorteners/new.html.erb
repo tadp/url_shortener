@@ -1,19 +1,20 @@
 <div class="inner cover">
-  <h1 class="cover-heading">Shorten Urls.</h1>
-  <p class="lead">Use Shortener to shorten your long urls into manageable, linkable, and sharable tidbits of link fun.</p>
+  <h1 class="cover-heading">Miny is better.</h1>
+  <p class="lead">Quickly shorten your long urls.</p>
 
-  <%= form_for @shortener do %>
-  <form>
-
-    <%= label_tag :long_url, "Long url" %>
-    <%= text_field_tag :long_url, nil, placeholder: 'www.google.com' %>
-    <br>
-    <br>
-    <p class="lead">
-      <button class="btn btn-lg btn-default" type='submit'>Submit</button>
-    </p>
-  </form>
-
+  <%= form_for(@shortener, remote: true) do %>
+    <form>
+      <%= label_tag :long_url, "Long url" %>
+      <%= text_field_tag :long_url, nil, placeholder: 'www.google.com' %>
+      <br>
+      <br>
+      <p class="lead">
+        <button class="submit btn btn-lg btn-default" type='submit'>Submit</button>
+      </p>
+   </form>
   <% end %>
+
 </div>
 
+<div id = "modals-container">
+<div>

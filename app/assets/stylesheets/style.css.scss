@@ -1,0 +1,44 @@
+
+.cover {
+  margin-top: 90px;
+}
+
+
+#modals-container {
+  height: 150px;
+  overflow: hidden;
+  -webkit-mask-image: -webkit-gradient(linear, left 80%, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+}
+
+/* Base styles (regardless of theme) */
+.bs-callout {
+  margin: 20px 0;
+  padding: 15px 30px 15px 15px;
+  border-left: 5px solid #eee;
+}
+.bs-callout h4 {
+  margin-top: 0;
+}
+.bs-callout p:last-child {
+  margin-bottom: 0;
+}
+.bs-callout code,
+.bs-callout .highlight {
+  background-color: #fff;
+}
+ 
+/* Themes for different contexts */
+.bs-callout-danger {
+  background-color: #AB4949;
+  border-color: #dFb5b4;
+}
+.bs-callout-warning {
+  background-color: #fefbed;
+  border-color: #f1e7bc;
+}
+body {
+  .bs-callout-info {
+    background-color: #2A5981;
+    border-color: #d0e3f0;
+  }
+}

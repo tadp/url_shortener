@@ -2,7 +2,7 @@ class Shortener < ActiveRecord::Base
 
   def save_and_process
   	generate_token
-  	self.short_url = 'https://a2a.herokuapp.com/s/' + self.token.to_s
+  	self.short_url = 'https://f35.herokuapp.com/' + self.token.to_s
   	self.save
   end
 
