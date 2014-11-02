@@ -28,8 +28,12 @@ class ShortenersController < ApplicationController
 	end
 
 	def redirect
-		@shortener = Shortener.where(token: params[:token]).first
-		redirect_to "http://#{@shortener.long_url.to_s}"
+		shortener = Shortener.where(token: params[:token]).first
+		if shortener
+			redirect_to "http://#{shortener.long_url.to_s}"
+		else
+			redirect_to root_path
+		end
 	end
 
 end

@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   resources :shorteners
 
-  get 's/:token' => 'shorteners#redirect', as: :redirect
+  get '/:token' => 'shorteners#redirect', as: :redirect
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

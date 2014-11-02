@@ -7,6 +7,6 @@ class Shortener < ActiveRecord::Base
   end
 
   def generate_token
-  	self.token = SecureRandom.urlsafe_base64(n=5)
+  	self.token = SecureRandom.urlsafe_base64(n=2)
   end
 end
