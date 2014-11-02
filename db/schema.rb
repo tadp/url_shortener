@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141101000301) do
+ActiveRecord::Schema.define(version: 20141102024223) do
 
   create_table "shorteners", force: true do |t|
     t.string   "long_url"
@@ -20,5 +20,8 @@ ActiveRecord::Schema.define(version: 20141101000301) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "shorteners", ["long_url"], name: "index_shorteners_on_long_url", unique: true
+  add_index "shorteners", ["token"], name: "index_shorteners_on_token", unique: true
 
 end
