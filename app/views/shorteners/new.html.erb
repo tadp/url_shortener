@@ -4,7 +4,7 @@
 
   <%= form_for(@shortener, remote: true) do %>
     <form>
-      <%= label_tag :long_url, "Long url" %>
+      <%= label_tag :long_url, "http://" %>
       <%= text_field_tag :long_url, nil, placeholder: 'www.google.com' %>
       <br>
       <br>

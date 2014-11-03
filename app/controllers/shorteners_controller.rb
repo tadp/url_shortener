@@ -17,7 +17,7 @@ class ShortenersController < ApplicationController
 				  format.html { redirect_to shortener_path(@shortener.id) }
 				else
 					format.html { redirect_to root_path}
-					format.js   { render :error, shortener: @shortener }
+					format.js   { render :error }
 				end
 			end
 		end

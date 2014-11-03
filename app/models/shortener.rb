@@ -1,4 +1,6 @@
+
 class Shortener < ActiveRecord::Base
+	validates :long_url, url: true
 
   def save_and_process
   	generate_token
