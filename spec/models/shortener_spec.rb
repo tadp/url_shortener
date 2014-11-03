@@ -23,4 +23,18 @@ describe Shortener do
 	  end
 	end
 
+  describe "save" do
+    it "should allow good urls" do
+      shortener = FactoryGirl.create(:shortener, long_url: 'www.longlonglongurl.com')
+      shortener.save
+      expect(shortener.errors).to be_empty
+    end
+
+    it "should not allow invalid urls on create" do
+      shortener = Shortener.new( long_url: 'ww .longm')
+      shortener.save
+      expect(Shortener.count).to eq(0)
+    end
+  end
+
 end
